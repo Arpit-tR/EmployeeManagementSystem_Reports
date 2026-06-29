@@ -1,0 +1,77 @@
+﻿@model EmployeeManagementSystem_Reports.Models.Employee
+
+@{
+    ViewBag.Title = "Employee Details";
+}
+
+<div class="container mt-4">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-7">
+
+            <div class="card shadow p-4">
+
+                <h3 class="mb-4 text-center">Employee Details</h3>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Name</label>
+                    <div class="form-control">@Model.Name</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Email</label>
+                    <div class="form-control">@Model.Email</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Mobile</label>
+                    <div class="form-control">@Model.Mobile</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Address</label>
+                    <div class="form-control">@Model.Address</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Gender</label>
+                    <div class="form-control">@Model.Gender</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Joining Date</label>
+                    <div class="form-control">
+                        @Model.JoiningDate.ToShortDateString()
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Department</label>
+                    <div class="form-control">
+                        @Model.Department.DepartmentName
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex justify-content-between">
+
+                    <a href="@Url.Action("Edit", new { id = Model.EmployeeId })"
+                       class="btn btn-primary">
+                        Edit
+                    </a>
+
+                    <a href="@Url.Action("Index")"
+                       class="btn btn-secondary">
+                        Back
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

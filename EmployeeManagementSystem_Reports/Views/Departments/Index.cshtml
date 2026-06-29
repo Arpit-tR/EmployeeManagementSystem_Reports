@@ -1,0 +1,43 @@
+﻿@model IEnumerable<EmployeeManagementSystem_Reports.Models.Department>
+
+@{
+    ViewBag.Title = "Departments";
+}
+
+<h2>Departments</h2>
+
+<p>
+    @Html.ActionLink("Create", "Create", null,
+                new { @class = "btn btn-primary" })
+</p>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Department Name</th>
+        <th>Manager Name</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.DepartmentName</td>
+            <td>@item.ManagerName</td>
+          
+            <td>
+                @Html.ActionLink("Edit", "Edit",
+               new { id = item.DepartmentId },
+               new { @class = "btn btn-warning btn-sm" })
+
+                @Html.ActionLink("Details", "Details",
+                         new { id = item.DepartmentId },
+                         new { @class = "btn btn-info btn-sm" })
+
+                @Html.ActionLink("Delete", "Delete",
+                         new { id = item.DepartmentId },
+                         new { @class = "btn btn-danger btn-sm" })
+            </td>
+        </tr>
+    }
+
+</table>

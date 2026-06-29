@@ -1,0 +1,57 @@
+﻿@model EmployeeManagementSystem_Reports.Models.Department
+
+@{
+    ViewBag.Title = "Create Department";
+}
+
+<div class="container mt-4">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card shadow p-4">
+
+                <h3 class="mb-4 text-center">Edit Department</h3>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    @Html.HiddenFor(model => model.DepartmentId)
+
+                    <!-- Department Name -->
+                    <div class="mb-3">
+                        @Html.LabelFor(m => m.DepartmentName, new { @class = "form-label fw-bold" })
+                        @Html.TextBoxFor(m => m.DepartmentName, new { @class = "form-control", placeholder = "Enter Department Name" })
+                        @Html.ValidationMessageFor(m => m.DepartmentName, "", new { @class = "text-danger" })
+                    </div>
+
+                    <!-- Manager Name -->
+                    <div class="mb-3">
+                        @Html.LabelFor(m => m.ManagerName, new { @class = "form-label fw-bold" })
+                        @Html.TextBoxFor(m => m.ManagerName, new { @class = "form-control", placeholder = "Enter Manager Name" })
+                        @Html.ValidationMessageFor(m => m.ManagerName, "", new { @class = "text-danger" })
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-between">
+
+                        <button type="submit" class="btn btn-primary">
+                            Save Department
+                        </button>
+
+                        @Html.ActionLink("Back", "Index", null, new { @class = "btn btn-secondary" })
+
+                    </div>
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

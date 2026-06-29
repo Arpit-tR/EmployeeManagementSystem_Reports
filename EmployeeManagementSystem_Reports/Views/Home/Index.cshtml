@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Dashboard</h2>
+
+    <div class="row">
+
+        <!-- Total Employees -->
+        <div class="col-md-3">
+            <div class="card text-white bg-primary shadow mb-3">
+                <div class="card-body text-center">
+                    <h5>Total Employees</h5>
+                    <h2>@ViewBag.TotalEmployees</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Departments -->
+        <div class="col-md-3">
+            <div class="card text-white bg-success shadow mb-3">
+                <div class="card-body text-center">
+                    <h5>Total Departments</h5>
+                    <h2>@ViewBag.TotalDepartments</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Male Employees -->
+        <div class="col-md-3">
+            <div class="card text-white bg-info shadow mb-3">
+                <div class="card-body text-center">
+                    <h5>Male Employees</h5>
+                    <h2>@ViewBag.MaleEmployees</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Female Employees -->
+        <div class="col-md-3">
+            <div class="card text-white bg-danger shadow mb-3">
+                <div class="card-body text-center">
+                    <h5>Female Employees</h5>
+                    <h2>@ViewBag.FemaleEmployees</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
