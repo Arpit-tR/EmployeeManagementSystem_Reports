@@ -121,7 +121,7 @@ Employees (Many)
 ## Dashboard
 
 <p align="center">
-<img src="assets/Dashboard.png" width="900">
+<img src="assets/Dashboard .png" width="900">
 </p>
 
 ---
