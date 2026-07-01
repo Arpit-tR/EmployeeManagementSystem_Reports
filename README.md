@@ -1,42 +1,48 @@
 # Employee Management System with Dashboard & RDLC Reports
 
-An ASP.NET MVC 5 web application for managing employees and departments. The project demonstrates CRUD operations, Entity Framework (Database First), SQL Server integration, dashboard analytics, search functionality, and RDLC reporting.
+An ASP.NET MVC 5 web application developed using **C#**, **Entity Framework (Database First)**, and **SQL Server** for managing employees and departments. This enhanced version includes an interactive dashboard, employee search, responsive Bootstrap UI, and RDLC report generation.
 
 ---
 
 ## Features
 
-- Employee Management
-  - Create Employee
-  - View Employee Details
-  - Edit Employee
-  - Delete Employee
+### Employee Management
+- Add Employee
+- View Employee Details
+- Update Employee Information
+- Delete Employee
 
-- Department Management
-  - Create Department
-  - View Department Details
-  - Edit Department
-  - Delete Department
+### Department Management
+- Add Department
+- View Department Details
+- Update Department Information
+- Delete Department
 
-- Dashboard
-  - Total Employees
-  - Total Departments
-  - Male Employees Count
-  - Female Employees Count
+### Dashboard
+- Total Employees
+- Total Departments
+- Male Employees Count
+- Female Employees Count
 
-- Search Employees
-  - Search employees by name
+### Search Functionality
+- Search employees by name
+- Instant employee filtering
 
-- RDLC Reports
-  - Employee Report
-  - Displays employee information with department details
+### RDLC Reports
+- Employee Report
+- Department information included
+- Print-friendly report
+- Microsoft Report Viewer Integration
 
-- Responsive UI
-  - Bootstrap-based clean and modern interface
+### Responsive UI
+- Bootstrap-based modern interface
+- Clean forms
+- Responsive layout
+- User-friendly navigation
 
 ---
 
-## Technologies Used
+# Technologies Used
 
 - ASP.NET MVC 5
 - C#
@@ -46,12 +52,13 @@ An ASP.NET MVC 5 web application for managing employees and departments. The pro
 - HTML5
 - CSS3
 - JavaScript
+- Razor View Engine
 - RDLC Reports
 - Microsoft Report Viewer
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```
 EmployeeManagementSystem_Reports
@@ -60,37 +67,44 @@ EmployeeManagementSystem_Reports
 ├── Models
 ├── Views
 ├── Reports
-│   └── EmployeeReport.rdlc
-├── Scripts
+│     └── EmployeeReport.rdlc
 ├── Content
-└── App_Data
+├── Scripts
+├── assets
+├── Web.config
+└── EmployeeManagementSystem_Reports.sln
 ```
 
 ---
 
-## Screens Included
+# Database Structure
 
-- Dashboard
-- Employee List
-- Create Employee
-- Edit Employee
-- Employee Details
-- Delete Employee
-- Department Management
-- Employee RDLC Report
+## Employees
+
+| Column |
+|---------|
+| EmployeeId |
+| Name |
+| Email |
+| Mobile |
+| Address |
+| Gender |
+| JoiningDate |
+| DepartmentId |
 
 ---
 
-## Database
+## Departments
 
-This project uses SQL Server with Entity Framework Database First.
+| Column |
+|---------|
+| DepartmentId |
+| DepartmentName |
+| ManagerName |
 
-Tables:
+---
 
-- Employees
-- Departments
-
-Relationship:
+## Relationship
 
 ```
 Department (1)
@@ -102,43 +116,89 @@ Employees (Many)
 
 ---
 
-## How to Run
+# Application Screenshots
 
-### Clone the repository
+## Dashboard
+
+<p align="center">
+<img src="assets/Dashboard.png" width="900">
+</p>
+
+---
+
+## Add Employee
+
+<p align="center">
+<img src="assets/Edit_Employee.png" width="900">
+</p>
+
+---
+
+## Department List
+
+<p align="center">
+<img src="assets/Departments.png" width="900">
+</p>
+
+---
+
+## Employee Search
+
+<p align="center">
+<img src="assets/Employees.png" width="900">
+</p>
+
+---
+
+## RDLC Report
+
+<p align="center">
+<img src="assets/report.png" width="900">
+</p>
+
+---
+
+# How to Run
+
+## Clone Repository
 
 ```bash
 git clone https://github.com/Arpit-tR/EmployeeManagementSystem_Reports.git
 ```
 
-### Open in Visual Studio
+---
 
-Open:
+## Open Solution
+
+Open in Visual Studio 2022
 
 ```
 EmployeeManagementSystem_Reports.sln
 ```
 
-### Restore NuGet Packages
+---
+
+## Restore NuGet Packages
 
 ```
 Tools
 → NuGet Package Manager
-→ Restore Packages
+→ Restore NuGet Packages
 ```
 
-### Configure Database
+---
 
-Update the connection string in:
+## Configure Database
+
+Update the SQL Server connection string inside
 
 ```
 Web.config
 ```
 
-Point it to your SQL Server instance.
+---
 
-### Run
-
-Press
+## Run
 
 ```
 F5
@@ -152,47 +212,61 @@ Ctrl + F5
 
 ---
 
-## Project Highlights
+# Highlights
 
-✔ ASP.NET MVC Architecture
-
-✔ Entity Framework Database First
-
-✔ SQL Server Integration
-
-✔ CRUD Operations
-
-✔ Dashboard Analytics
-
-✔ Search Functionality
-
-✔ RDLC Report Generation
-
-✔ Bootstrap Responsive UI
+- ASP.NET MVC Architecture
+- Entity Framework Database First
+- SQL Server Integration
+- Employee CRUD
+- Department CRUD
+- Dashboard Analytics
+- Employee Search
+- RDLC Report Generation
+- Responsive Bootstrap UI
+- Form Validation
+- Clean Code Structure
 
 ---
 
-## Future Enhancements
+# Future Improvements
 
 - Crystal Reports Integration
-- Authentication & Authorization
-- Role-based Access Control
-- Export Reports to PDF/Excel
-- Pagination
-- Advanced Filtering
+- Export to PDF & Excel
+- Login Authentication
+- Role-Based Authorization
 - Email Notifications
+- Pagination
+- REST API
+- Charts & Analytics
 
 ---
 
-## Author
+# Related Project
+
+## Employee Management System
+
+A version of this project featuring:
+
+- Employee CRUD
+- Department CRUD
+- PDF Report Generation
+
+Repository:
+
+https://github.com/Arpit-tR/EmployeeManagementSystem
+
+---
+
+# Author
 
 **Arpit Sadhukhan**
 
-GitHub:
+GitHub
+
 https://github.com/Arpit-tR
 
 ---
 
-## License
+# License
 
-This project is created for learning and demonstration purposes.
+This project was developed for learning, practice, and portfolio purposes.
